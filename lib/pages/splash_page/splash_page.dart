@@ -26,6 +26,7 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            // ignore: avoid_unnecessary_containers
             const SizedBox(height: 5),
             Container(
               child: Column(

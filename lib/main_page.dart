@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel_project/pages/favorite_page/favorite_page.dart';
 import 'package:hotel_project/pages/home_page/home_page.dart';
 import 'package:hotel_project/pages/location_page/location_page.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -24,6 +26,8 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        fixedColor: Colors.green,
+        elevation: 0,
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectindex,
         onTap: (mytap) {
@@ -31,21 +35,21 @@ class _MainPageState extends State<MainPage> {
             _selectindex = mytap;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(CupertinoIcons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline_rounded),
+            icon: Icon(CupertinoIcons.heart),
             label: 'Favorite',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.location_on_outlined),
+            icon: Icon(CupertinoIcons.location_solid),
             label: 'Location',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
+            icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],

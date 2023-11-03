@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_project/main_page.dart';
 import 'package:hotel_project/pages/button_page/button_page.dart';
 import 'package:hotel_project/pages/home_page/home_page.dart';
 import 'package:hotel_project/pages/signup_page/signup_page.dart';
@@ -126,7 +127,7 @@ class SignInPage extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
+                        builder: (context) => const MainPage(),
                       ));
                 },
                 child: const Text(
