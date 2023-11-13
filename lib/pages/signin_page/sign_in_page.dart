@@ -3,6 +3,7 @@ import 'package:hotel_project/main_page.dart';
 import 'package:hotel_project/pages/button_page/button_page.dart';
 import 'package:hotel_project/pages/home_page/home_page.dart';
 import 'package:hotel_project/pages/signup_page/signup_page.dart';
+import 'package:hotel_project/pages/utilities/constain.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -110,9 +111,9 @@ class SignInPage extends StatelessWidget {
                 children: [
                   TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'Forgot password?',
-                        style: TextStyle(color: Colors.green.shade800),
+                        style: TextStyle(color: primaryColor),
                       ))
                 ],
               ),
@@ -177,9 +178,9 @@ class SignInPage extends StatelessWidget {
                 children: [
                   const Text('Dont\'s have an account?'),
                   TextButton(
-                    child: Text(
+                    child: const Text(
                       'Sign up',
-                      style: TextStyle(color: Colors.green.shade700),
+                      style: TextStyle(color: primaryColor),
                     ),
                     onPressed: () {
                       Navigator.push(

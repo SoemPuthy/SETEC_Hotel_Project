@@ -75,6 +75,11 @@ flutter:
     - assets/img/h3.jpg
     - assets/img/h4.jpg
     - assets/img/h5.jpg
+    - assets/img/pp.jpg
+    - assets/img/sr.jpg
+    - assets/img/kp.jpg
+    - assets/img/takeo.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

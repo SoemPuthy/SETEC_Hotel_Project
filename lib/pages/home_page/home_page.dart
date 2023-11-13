@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hotel_project/pages/home_page/list_view.dart';
 import 'package:hotel_project/pages/sidebar_page/sidebar_page.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel_project/pages/slider_home_page/auto_slider.dart';
+import 'package:hotel_project/pages/splash_page/splash_page.dart';
+import 'package:hotel_project/pages/utilities/constain.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,27 +29,33 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
+                    children: const [
+                      SizedBox(
                         height: 12,
                       ),
                       Text(
                         'Gold Member',
                         style: TextStyle(
-                            color: Colors.green.shade400,
-                            fontWeight: FontWeight.w700),
+                            color: Colors.amber, fontWeight: FontWeight.w700),
                       ),
-                      const Text(
+                      Text(
                         'Soem Puthy',
                         style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.w700),
+                            color: secondaryColor,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SplashPage()));
+                    },
                     child: const CircleAvatar(
-                      radius: 30,
+                      radius: 25,
                       backgroundImage: AssetImage('assets/img/profile.png'),
                     ),
                   ),
@@ -71,7 +80,30 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 10),
-            const ListViewPage(),
+            AutoSliderHomepage(),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Hotel Location',
+                    style: TextStyle(
+                        color: secondaryColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'See all',
+                      style: TextStyle(color: secondaryColor),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            ListViewPage(),
           ],
         ),
       ),
