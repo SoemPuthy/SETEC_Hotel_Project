@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:hotel_project/pages/categories/province/phnompenh/phnom_penh.dart';
+import 'package:hotel_project/pages/categories/province/siem_reap_province/siem_reap_province.dart';
 import 'package:hotel_project/pages/splash_page/splash_page.dart';
 import 'package:hotel_project/pages/utilities/constain.dart';
 
@@ -15,10 +17,15 @@ class _ListViewPageState extends State<ListViewPage> {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(left: 15, right: 15),
           height: 100,
           width: double.infinity,
           child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PhnomPenhPage()));
+            },
             child: Card(
               elevation: 5,
               shadowColor: Colors.black,
@@ -33,6 +40,13 @@ class _ListViewPageState extends State<ListViewPage> {
                     children: [
                       Container(
                         child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const PhnomPenhPage()));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(22),
                             child: Image.asset(
@@ -80,10 +94,15 @@ class _ListViewPageState extends State<ListViewPage> {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(left: 15, right: 15),
           height: 100,
           width: double.infinity,
           child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SiemReapPage()));
+            },
             child: Card(
               elevation: 5,
               shadowColor: Colors.black,
@@ -98,6 +117,13 @@ class _ListViewPageState extends State<ListViewPage> {
                     children: [
                       Container(
                         child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const SiemReapPage()));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(22),
                             child: Image.asset(
@@ -144,7 +170,6 @@ class _ListViewPageState extends State<ListViewPage> {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(left: 15, right: 15),
           height: 100,
           width: double.infinity,
           child: GestureDetector(
@@ -205,7 +230,6 @@ class _ListViewPageState extends State<ListViewPage> {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(left: 15, right: 15),
           height: 100,
           width: double.infinity,
           // color: Colors.teal,

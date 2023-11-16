@@ -10,7 +10,6 @@ class _AutoSliderHomepageState extends State<AutoSliderHomepage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 20),
       height: 200,
       width: double.infinity,
       child: ListView(

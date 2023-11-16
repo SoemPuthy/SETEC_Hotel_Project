@@ -18,11 +18,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        padding: const EdgeInsets.only(left: 20, right: 20),
         child: Column(
           children: [
             Container(
               // color: Colors.teal,
-              margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
+              margin: const EdgeInsets.only(top: 30),
               height: 60,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,7 +67,6 @@ class _HomePageState extends State<HomePage> {
             Container(
               // color: Colors.green,
               height: 50,
-              margin: const EdgeInsets.only(right: 20, left: 20),
               child: TextFormField(
                 onTap: () {},
                 decoration: InputDecoration(
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 10),
             AutoSliderHomepage(),
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.only(left: 0, right: 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
