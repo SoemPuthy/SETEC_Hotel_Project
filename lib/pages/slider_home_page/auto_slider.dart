@@ -11,7 +11,7 @@ class _AutoSliderHomepageState extends State<AutoSliderHomepage> {
   Widget build(BuildContext context) {
     return Container(
       height: 200,
-      width: double.infinity,
+      width: double.maxFinite,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
