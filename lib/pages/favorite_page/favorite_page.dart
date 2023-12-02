@@ -13,7 +13,9 @@ class _FavoritePageState extends State<FavoritePage> {
     return Scaffold(
       body: ListView(
         scrollDirection: Axis.horizontal,
-        children: [],
+        children: [
+          SizeBox(height 5),
+        ],
       ),
     );
   }
