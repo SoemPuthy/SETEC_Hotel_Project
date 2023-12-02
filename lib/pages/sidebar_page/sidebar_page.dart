@@ -39,7 +39,7 @@ class SideBarPage extends StatelessWidget {
               style: TextStyle(
                   color: Colors.black54,
                   fontWeight: FontWeight.w700,
-                  fontSize: 16),
+                  fontSize: 17),
             ),
           ),
           ListTile(
