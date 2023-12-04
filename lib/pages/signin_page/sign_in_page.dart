@@ -31,7 +31,7 @@ class SignInPage extends StatelessWidget {
               height: 80,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Login',
                     style: TextStyle(
@@ -42,7 +42,7 @@ class SignInPage extends StatelessWidget {
                   SizedBox(height: 10),
                   Text(
                     'Please login to continue.',
-                    style: TextStyle(color: Colors.black45, fontSize: 17),
+                    style: TextStyle(color: Colors.black45, fontSize: 16),
                   )
                 ],
               ),
