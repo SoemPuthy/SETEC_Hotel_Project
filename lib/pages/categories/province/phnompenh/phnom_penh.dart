@@ -1,4 +1,6 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hotel_project/pages/utilities/constain.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -15,15 +17,22 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
   @override
   Widget build(BuildContext context) {
     double rating = 0;
+    var internet = '80';
     return Scaffold(
       appBar: AppBar(
         elevation: 3,
         toolbarHeight: 60,
         centerTitle: true,
         backgroundColor: primaryColor,
-        title: const Text('Phnom Penh'),
+        title: const Text(
+          'Phnom Penh',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+        ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new),
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.white,
+          ),
           onPressed: () {
             Navigator.pop(context);
           },

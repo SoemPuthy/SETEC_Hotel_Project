@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_project/main_page.dart';
 import 'package:hotel_project/pages/button_page/button_page.dart';
-import 'package:hotel_project/pages/home_page/home_page.dart';
 import 'package:hotel_project/pages/signup_page/signup_page.dart';
 import 'package:hotel_project/pages/utilities/constain.dart';
 
@@ -15,7 +14,7 @@ class SignInPage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 21, top: 50),
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 50),
               child: Container(
                 // color: Colors.red,
                 alignment: Alignment.centerLeft,
@@ -29,7 +28,7 @@ class SignInPage extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               margin: const EdgeInsets.only(left: 20, right: 20),
               height: 80,
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -39,10 +38,10 @@ class SignInPage extends StatelessWidget {
                       fontSize: 35,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Text(
                     'Please login to continue.',
-                    style: TextStyle(color: Colors.black45, fontSize: 16),
+                    style: TextStyle(color: Colors.black45, fontSize: 17),
                   )
                 ],
               ),
@@ -133,7 +132,7 @@ class SignInPage extends StatelessWidget {
                 },
                 child: const Text(
                   'Login',
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ),

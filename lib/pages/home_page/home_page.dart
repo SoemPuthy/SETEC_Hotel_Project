@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_project/pages/home_page/list_view.dart';
-import 'package:hotel_project/pages/sidebar_page/sidebar_page.dart';
-import 'package:flutter/material.dart';
 import 'package:hotel_project/pages/slider_home_page/auto_slider.dart';
 import 'package:hotel_project/pages/splash_page/splash_page.dart';
 import 'package:hotel_project/pages/utilities/constain.dart';
@@ -28,12 +26,9 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      SizedBox(
-                        height: 12,
-                      ),
+                    children: [
                       Text(
                         'Gold Member',
                         style: TextStyle(
