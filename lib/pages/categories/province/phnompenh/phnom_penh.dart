@@ -12,12 +12,8 @@ class PhnomPenhPage extends StatefulWidget {
 }
 
 class _PhnomPenhPageState extends State<PhnomPenhPage> {
-  set rating(double rating) {}
-
   @override
   Widget build(BuildContext context) {
-    double rating = 0;
-    var internet = '80';
     return Scaffold(
       appBar: AppBar(
         elevation: 3,
@@ -64,20 +60,22 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                             children: [
                               const Text('Five Stars'),
                               RatingBar.builder(
-                                updateOnDrag: false,
-                                allowHalfRating: true,
                                 itemSize: 20,
+                                initialRating: 5,
+                                minRating: 5,
                                 maxRating: 5,
-                                onRatingUpdate: (rating) {
-                                  setState(() {
-                                    this.rating = rating;
-                                  });
-                                },
+                                direction: Axis.horizontal,
+                                allowHalfRating: false,
+                                itemCount: 5,
                                 itemBuilder: (context, _) => const Icon(
                                   Icons.star,
-                                  color: secondaryColor,
+                                  color: Colors.amber,
+                                  size: 5,
                                 ),
-                              ),
+                                onRatingUpdate: (rating) {
+                                  print(rating);
+                                },
+                              )
                             ],
                           ),
                         ],
@@ -109,6 +107,145 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                   const SizedBox(height: 5),
                 ],
               ),
+              const Divider(),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage('assets/img/profile.png'),
+                      ),
+                      const SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Rosewood Hotel',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w700),
+                          ),
+                          Row(
+                            children: [
+                              const Text('Five Stars'),
+                              RatingBar.builder(
+                                itemSize: 20,
+                                initialRating: 5,
+                                minRating: 5,
+                                maxRating: 5,
+                                direction: Axis.horizontal,
+                                allowHalfRating: false,
+                                itemCount: 5,
+                                itemBuilder: (context, _) => const Icon(
+                                  Icons.star,
+                                  color: Colors.amber,
+                                  size: 5,
+                                ),
+                                onRatingUpdate: (rating) {
+                                  print(rating);
+                                },
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 200,
+                    // color: Colors.teal,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Card(
+                        borderOnForeground: false,
+                        shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(22),
+                        ),
+                        elevation: 3,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(22),
+                          child: Image.asset(
+                            'assets/img/rosewood.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                ],
+              ),
+              const Divider(),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage('assets/img/profile.png'),
+                      ),
+                      const SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Hyatt Regency Phnom Penh',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w700),
+                          ),
+                          Row(
+                            children: [
+                              const Text('Five Stars'),
+                              RatingBar.builder(
+                                itemSize: 20,
+                                initialRating: 5,
+                                minRating: 5,
+                                maxRating: 5,
+                                direction: Axis.horizontal,
+                                allowHalfRating: false,
+                                itemCount: 5,
+                                itemBuilder: (context, _) => const Icon(
+                                  Icons.star,
+                                  color: Colors.amber,
+                                  size: 5,
+                                ),
+                                onRatingUpdate: (rating) {
+                                  print(rating);
+                                },
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: double.infinity,
+                    height: 200,
+                    // color: Colors.teal,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Card(
+                        borderOnForeground: false,
+                        shape: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(22),
+                        ),
+                        elevation: 3,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(22),
+                          child: Image.asset(
+                            'assets/img/rosewood.png',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                ],
+              ),
+              Divider(),
               Column(
                 children: [
                   Row(),
