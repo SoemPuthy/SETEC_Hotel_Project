@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hotel_project/pages/categories/province/phnompenh/sokha_hotel/sokha_hotel.dart';
 import 'package:hotel_project/pages/utilities/constain.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -22,7 +23,8 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
         backgroundColor: primaryColor,
         title: const Text(
           'Phnom Penh',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+          style: TextStyle(
+              color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18),
         ),
         leading: IconButton(
           icon: const Icon(
@@ -43,9 +45,19 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                 children: [
                   Row(
                     children: [
-                      const CircleAvatar(
-                        radius: 25,
-                        backgroundImage: AssetImage('assets/img/profile.png'),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SokhaHotelPage(),
+                              ));
+                        },
+                        child: const CircleAvatar(
+                          radius: 25,
+                          backgroundImage:
+                              AssetImage('assets/img/sokhahotel/logo.jpg'),
+                        ),
                       ),
                       const SizedBox(width: 10),
                       Column(
@@ -58,12 +70,12 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                           ),
                           Row(
                             children: [
-                              const Text('Five Stars'),
+                              const Text('4-star hotel'),
                               RatingBar.builder(
                                 itemSize: 20,
-                                initialRating: 5,
-                                minRating: 5,
-                                maxRating: 5,
+                                initialRating: 4,
+                                maxRating: 4,
+                                minRating: 4,
                                 direction: Axis.horizontal,
                                 allowHalfRating: false,
                                 itemCount: 5,
@@ -88,17 +100,26 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                     // color: Colors.teal,
                     child: GestureDetector(
                       onTap: () {},
-                      child: Card(
-                        borderOnForeground: false,
-                        shape: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        elevation: 3,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(22),
-                          child: Image.asset(
-                            'assets/img/hotelsokha.jpg',
-                            fit: BoxFit.cover,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const SokhaHotelPage()));
+                        },
+                        child: Card(
+                          borderOnForeground: false,
+                          shape: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                          ),
+                          elevation: 3,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(22),
+                            child: Image.asset(
+                              'assets/img/sokhahotel/1.jpg',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -114,7 +135,8 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                     children: [
                       const CircleAvatar(
                         radius: 25,
-                        backgroundImage: AssetImage('assets/img/profile.png'),
+                        backgroundImage:
+                            AssetImage('assets/img/rosewoodlogo.jpg'),
                       ),
                       const SizedBox(width: 10),
                       Column(
@@ -130,9 +152,9 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                               const Text('Five Stars'),
                               RatingBar.builder(
                                 itemSize: 20,
-                                initialRating: 5,
-                                minRating: 5,
-                                maxRating: 5,
+                                initialRating: 4,
+                                minRating: 4,
+                                maxRating: 4,
                                 direction: Axis.horizontal,
                                 allowHalfRating: false,
                                 itemCount: 5,
@@ -183,7 +205,8 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                     children: [
                       const CircleAvatar(
                         radius: 25,
-                        backgroundImage: AssetImage('assets/img/profile.png'),
+                        backgroundImage:
+                            AssetImage('assets/img/rosewoodlogo.png'),
                       ),
                       const SizedBox(width: 10),
                       Column(
@@ -196,7 +219,7 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
                           ),
                           Row(
                             children: [
-                              const Text('Five Stars'),
+                              const Text('4-star hotel'),
                               RatingBar.builder(
                                 itemSize: 20,
                                 initialRating: 5,
