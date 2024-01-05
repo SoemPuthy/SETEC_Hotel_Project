@@ -18,3 +18,12 @@ final ButtonStyle buttonEmailSignupPage = ElevatedButton.styleFrom(
     borderRadius: BorderRadius.circular(50),
   ),
 );
+
+final ButtonStyle buttonBooking = ElevatedButton.styleFrom(
+  elevation: 3,
+  minimumSize: const Size(20, 40),
+  backgroundColor: secondaryColor,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(50),
+  ),
+);

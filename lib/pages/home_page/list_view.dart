@@ -58,10 +58,10 @@ class _ListViewPageState extends State<ListViewPage> {
                         ),
                       ),
                       const SizedBox(width: 5),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           Text(
                             'Phnom Penh',
                             style: TextStyle(
@@ -134,10 +134,10 @@ class _ListViewPageState extends State<ListViewPage> {
                         ),
                       ),
                       const SizedBox(width: 5),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           Text(
                             'Siem Reap Province',
                             style: TextStyle(
@@ -188,18 +188,18 @@ class _ListViewPageState extends State<ListViewPage> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(22),
                             child: Image.asset(
-                              'assets/img/takeo.jpg',
+                              'assets/img/shn.jpg',
                             ),
                           ),
                         ),
                       ),
                       const SizedBox(width: 5),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           Text(
-                            'Takeo',
+                            'Sihanoukville',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 17,

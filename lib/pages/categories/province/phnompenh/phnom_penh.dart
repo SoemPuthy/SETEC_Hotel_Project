@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hotel_project/pages/button_page/button_page.dart';
 import 'package:hotel_project/pages/categories/province/phnompenh/sokha_hotel/sokha_hotel.dart';
 import 'package:hotel_project/pages/utilities/constain.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -36,244 +37,101 @@ class _PhnomPenhPageState extends State<PhnomPenhPage> {
           },
         ),
       ),
+      backgroundColor: Colors.white.withOpacity(0.9),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           child: Column(
             children: [
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SokhaHotelPage(),
-                              ));
-                        },
-                        child: const CircleAvatar(
-                          radius: 25,
-                          backgroundImage:
-                              AssetImage('assets/img/sokhahotel/logo.jpg'),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Hotel Sokha',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w700),
-                          ),
-                          Row(
-                            children: [
-                              const Text('4-star hotel'),
-                              RatingBar.builder(
-                                itemSize: 20,
-                                initialRating: 4,
-                                maxRating: 4,
-                                minRating: 4,
-                                direction: Axis.horizontal,
-                                allowHalfRating: false,
-                                itemCount: 5,
-                                itemBuilder: (context, _) => const Icon(
-                                  Icons.star,
-                                  color: Colors.amber,
-                                  size: 5,
-                                ),
-                                onRatingUpdate: (rating) {
-                                  print(rating);
-                                },
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Container(
-                    width: double.infinity,
-                    height: 200,
-                    // color: Colors.teal,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const SokhaHotelPage()));
-                        },
-                        child: Card(
-                          borderOnForeground: false,
-                          shape: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(22),
-                          ),
-                          elevation: 3,
+              Container(
+                height: 130,
+                width: double.infinity,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 2,
+                    color: Colors.white,
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 10),
+                        GestureDetector(
+                          onTap: () {},
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(22),
+                            borderRadius: BorderRadius.circular(19),
                             child: Image.asset(
-                              'assets/img/sokhahotel/1.jpg',
-                              fit: BoxFit.cover,
+                              'assets/img/pph/3.jpg',
+                              height: 100,
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                ],
-              ),
-              const Divider(),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      const CircleAvatar(
-                        radius: 25,
-                        backgroundImage:
-                            AssetImage('assets/img/rosewoodlogo.jpg'),
-                      ),
-                      const SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Rosewood Hotel',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w700),
-                          ),
-                          Row(
-                            children: [
-                              const Text('Five Stars'),
-                              RatingBar.builder(
-                                itemSize: 20,
-                                initialRating: 4,
-                                minRating: 4,
-                                maxRating: 4,
-                                direction: Axis.horizontal,
-                                allowHalfRating: false,
-                                itemCount: 5,
-                                itemBuilder: (context, _) => const Icon(
-                                  Icons.star,
-                                  color: Colors.amber,
-                                  size: 5,
+                        const SizedBox(width: 10),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 5),
+                            Text(
+                              'Deluxe Room',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500, fontSize: 14),
+                            ),
+                            Text(
+                              '\$79.00',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: secondaryColor,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  '\$90.00',
+                                  style: TextStyle(
+                                      decoration: TextDecoration.lineThrough),
                                 ),
-                                onRatingUpdate: (rating) {
-                                  print(rating);
-                                },
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Container(
-                    width: double.infinity,
-                    height: 200,
-                    // color: Colors.teal,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Card(
-                        borderOnForeground: false,
-                        shape: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(22),
+                                SizedBox(width: 5),
+                                Text('/Night')
+                              ],
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(Icons.star, color: Colors.amber, size: 14),
+                                Icon(Icons.star, color: Colors.amber, size: 14),
+                                Icon(Icons.star, color: Colors.amber, size: 14),
+                                Icon(Icons.star, color: Colors.amber, size: 14),
+                                // ... add more stars as needed
+                              ],
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              '(4,245 Reviews)',
+                              style: TextStyle(fontSize: 10),
+                            ),
+                            Text(
+                              'Middle phnom penh city',
+                              style: TextStyle(fontSize: 10),
+                            ),
+                          ],
                         ),
-                        elevation: 3,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(22),
-                          child: Image.asset(
-                            'assets/img/rosewood.png',
-                            fit: BoxFit.cover,
+                        ElevatedButton(
+                          style: buttonBooking,
+                          onPressed: () {},
+                          child: const Icon(
+                            Icons.import_contacts_outlined,
+                            color: Colors.white,
                           ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 5),
-                ],
+                ),
               ),
-              const Divider(),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      const CircleAvatar(
-                        radius: 25,
-                        backgroundImage:
-                            AssetImage('assets/img/rosewoodlogo.png'),
-                      ),
-                      const SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Hyatt Regency Phnom Penh',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w700),
-                          ),
-                          Row(
-                            children: [
-                              const Text('4-star hotel'),
-                              RatingBar.builder(
-                                itemSize: 20,
-                                initialRating: 5,
-                                minRating: 5,
-                                maxRating: 5,
-                                direction: Axis.horizontal,
-                                allowHalfRating: false,
-                                itemCount: 5,
-                                itemBuilder: (context, _) => const Icon(
-                                  Icons.star,
-                                  color: Colors.amber,
-                                  size: 5,
-                                ),
-                                onRatingUpdate: (rating) {
-                                  print(rating);
-                                },
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Container(
-                    width: double.infinity,
-                    height: 200,
-                    // color: Colors.teal,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Card(
-                        borderOnForeground: false,
-                        shape: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        elevation: 3,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(22),
-                          child: Image.asset(
-                            'assets/img/rosewood.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                ],
-              ),
-              Divider(),
-              Column(
-                children: [
-                  Row(),
-                  Container(),
-                ],
+              const Divider(
+                color: Colors.black12,
               ),
             ],
           ),

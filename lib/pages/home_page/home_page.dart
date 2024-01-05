@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                 decoration: InputDecoration(
                   prefixIcon: const Icon(Icons.search),
                   hintText: 'location',
-                  labelText: 'Search your favorite hotel',
+                  labelText: 'Search your favorite room',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(22),
                   ),
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Hotel Location',
+                    'Hotel Option',
                     style: TextStyle(
                         color: secondaryColor,
                         fontSize: 20,

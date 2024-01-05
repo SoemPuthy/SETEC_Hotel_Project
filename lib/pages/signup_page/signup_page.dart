@@ -27,24 +27,24 @@ class SignUpPage extends StatelessWidget {
             Container(
               alignment: Alignment.centerLeft,
               margin: const EdgeInsets.only(left: 20, right: 20),
-              height: 80,
+              height: 90,
               // color: Colors.teal,
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Welcome',
                     style: TextStyle(fontSize: 35, fontWeight: FontWeight.w900),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Text(
                     'Let\'s get start a free account',
-                    style: TextStyle(fontSize: 17, color: Colors.black45),
+                    style: TextStyle(fontSize: 18, color: Colors.black45),
                   )
                 ],
               ),
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             Container(
               alignment: Alignment.centerLeft,
               margin: const EdgeInsets.only(left: 20, right: 20),
@@ -78,7 +78,7 @@ class SignUpPage extends StatelessWidget {
                 style: buttonEmailSignupPage,
                 child: const Text(
                   'Send code',
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ),
